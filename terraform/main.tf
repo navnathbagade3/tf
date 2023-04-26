@@ -1,7 +1,4 @@
 terraform {
-  //create backend to store terraform state first - it cannot be created by this script
-  backend "azurerm" {}
-
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -13,7 +10,8 @@ terraform {
 provider "azurerm" {
   features {}
   skip_provider_registration = true
-  
+}
+
   resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = "West US"

@@ -1,35 +1,17 @@
-#terraform {
-#  //create backend to store terraform state first - it cannot be created by this script
-#  backend "azurerm" {}
+terraform {
+  required_version = ">=0.12"
 
-#  required_providers {
-#    azurerm = {
-#      source  = "hashicorp/azurerm"
-#      version = "=3.44.1"
-#    }
-#  }
-#}
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~>2.0"
+    }
+  }
+}
 
-#provider "azurerm" {
-#  features {}
-#  skip_provider_registration = true
-#  //Authenticating to Azure#
-
-#  //"We recommend using either a Service Principal or Managed Service Identity when running Terraform non-interactively (such as when running Terraform in a CI server) - and authenticating using the Azure CLI when running Terraform locally."
-#  //https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
-#  //https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
-
-#  //az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/{subscription_id}"
-
-#  //appId is the client_id defined in the output of the command above.
-#  //password is the client_secret defined in the output of the command above.
-#  //tenant is the tenant_id defined in the output of the command above.#
-
-#  //export ARM_CLIENT_ID="00000000-0000-0000-0000-000000000000"
-#  //export ARM_CLIENT_SECRET="12345678-0000-0000-0000-000000000000"
-#  //export ARM_TENANT_ID="10000000-0000-0000-0000-000000000000"
-#  //export ARM_SUBSCRIPTION_ID="20000000-0000-0000-0000-000000000000"
-#}
+provider "azurerm" {
+  features {}
+}
 
 resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name

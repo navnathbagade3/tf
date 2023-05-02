@@ -1,0 +1,12 @@
+name: first worklfow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: deploy
+      run: echo "freom deploy"

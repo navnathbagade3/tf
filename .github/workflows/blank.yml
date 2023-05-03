@@ -11,4 +11,4 @@ jobs:
     - name: build
       run: |
         echo "from build"
-#        echo "second line from first workflow"
+        echo "second line from first workflow"

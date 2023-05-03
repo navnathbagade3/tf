@@ -1,4 +1,4 @@
-name: second workflow
+name: second_workflow
 on:
   workflow_run: 
     workflows: [first worklfow]

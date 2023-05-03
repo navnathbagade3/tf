@@ -14,4 +14,5 @@ jobs:
     - name: build
       run: |
         echo "from build"
+        echo ${{ tojson(github) }}
 #        echo "second line from first workflow"

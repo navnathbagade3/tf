@@ -1,7 +1,7 @@
-name: second-workflow
+name: second.workflow
 on:
   workflow_run: 
-    workflows: [first-worklfow]
+    workflows: [first.worklfow]
     types: 
       - completed
 jobs:

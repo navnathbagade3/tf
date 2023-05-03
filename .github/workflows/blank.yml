@@ -8,5 +8,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: deploy
-      run: echo "freom deploy"
+    - name: build
+      run: echo "from build"

@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: build
-      run: echo "from build"
+      run: |
+        echo "from build"
+        echo "second line from first workflow"

@@ -1,4 +1,4 @@
-name: first.worklfow
+name: first worklfow
 on:
   push:
     branches:

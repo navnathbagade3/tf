@@ -1,7 +1,7 @@
 name: second workflow
 on:
   workflow_run: 
-    workflows: [balnk]
+    workflows: [first worklfow]
     types: 
       - completed
 jobs:

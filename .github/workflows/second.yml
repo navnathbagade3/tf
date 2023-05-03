@@ -1,0 +1,11 @@
+name: second workflow
+on:
+  workflow_run: 
+    workflows: [first workflow]
+    type: completed
+jobs:
+  deploy:
+  runs-on: ubuntu-latest
+  steps:
+    - name: deploying
+      run: echo "deploying"
